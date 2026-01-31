@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ops">
+        <item>Penjumlahan (+)</item>
+        <item>Pengurangan (−)</item>
+        <item>Perkalian (×)</item>
+        <item>Pembagian (÷)</item>
+    </string-array>
+</resources>

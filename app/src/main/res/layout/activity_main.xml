@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <ScrollView
+        android:id="@+id/svMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:layout_marginBottom="5dp"
+            >
+
+
+            <!-- CALC CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCalc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="6dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- header dots -->
+                    <LinearLayout
+                        android:id="@+id/headerBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="18dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/dot_red"
+                                android:layout_marginEnd="8dp"/>
+
+                            <View
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/dot_yellow"
+                                android:layout_marginEnd="8dp"/>
+
+                            <View
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/dot_green"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tugas 1 Arief Adhitya Ramadhan J0403241055"
+                            android:textColor="@color/subtext"
+                            android:textSize="12sp"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <!-- accent -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/accent2"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- MAIN CONTENT -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="18dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kalkulator Sederhana"
+                            android:textColor="@color/text"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Masukkan 2 angka, lalu pilih operasi matematika"
+                            android:textColor="@color/subtext"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="16dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundMode="filled"
+                            app:boxBackgroundColor="@color/bg"
+                            app:boxCornerRadiusTopStart="18dp"
+                            app:boxCornerRadiusTopEnd="18dp"
+                            app:boxCornerRadiusBottomStart="18dp"
+                            app:boxCornerRadiusBottomEnd="18dp"
+                            app:boxStrokeColor="@color/border"
+                            app:hintTextColor="@color/subtext">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etA"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Angka pertama"
+                                android:inputType="numberDecimal|numberSigned"
+                                android:textColor="@color/text"
+                                android:textSize="16sp"
+                                android:padding="14dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundMode="filled"
+                            app:boxBackgroundColor="@color/bg"
+                            app:boxCornerRadiusTopStart="18dp"
+                            app:boxCornerRadiusTopEnd="18dp"
+                            app:boxCornerRadiusBottomStart="18dp"
+                            app:boxCornerRadiusBottomEnd="18dp"
+                            app:boxStrokeColor="@color/border"
+                            app:hintTextColor="@color/subtext">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Angka kedua"
+                                android:inputType="numberDecimal|numberSigned"
+                                android:textColor="@color/text"
+                                android:textSize="16sp"
+                                android:padding="14dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Space android:layout_width="match_parent" android:layout_height="14dp"/>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="@color/border"
+                            app:cardBackgroundColor="@color/bg">
+
+                            <Spinner
+                                android:id="@+id/spOp"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:paddingStart="14dp"
+                                android:paddingEnd="14dp"
+                                android:entries="@array/ops"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Space android:layout_width="match_parent" android:layout_height="16dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnHitung"
+                                android:layout_width="0dp"
+                                android:layout_height="52dp"
+                                android:layout_weight="1"
+                                android:text="Hitung"
+                                android:textAllCaps="false"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/card"
+                                app:cornerRadius="18dp"
+                                app:backgroundTint="@color/accent"
+                                app:rippleColor="@color/accent_pressed"/>
+
+                            <Space android:layout_width="12dp" android:layout_height="1dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnClear"
+                                android:layout_width="0dp"
+                                android:layout_height="52dp"
+                                android:layout_weight="1"
+                                android:text="Clear"
+                                android:textAllCaps="false"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text"
+                                app:cornerRadius="18dp"
+                                app:backgroundTint="@color/bg"
+                                app:strokeColor="@color/border"
+                                app:strokeWidth="1dp"/>
+                        </LinearLayout>
+
+                        <Space android:layout_width="match_parent" android:layout_height="14dp"/>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="@color/border"
+                            app:cardBackgroundColor="@color/result_bg">
+
+                            <TextView
+                                android:id="@+id/tvResult"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textColor="@color/result_text"
+                                android:textSize="18sp"
+                                android:padding="16dp"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+<Space android:layout_width="match_parent" android:layout_height="16dp"/>
+
+            <!-- history -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="6dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="History"
+                            android:textColor="@color/text"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnClearHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Hapus"
+                            android:textAllCaps="false"
+                            android:textColor="@color/text"
+                            app:cornerRadius="18dp"
+                            app:backgroundTint="@color/bg"
+                            app:strokeColor="@color/border"
+                            app:strokeWidth="1dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvHistoryHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Belum ada perhitungan."
+                        android:textColor="@color/subtext"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
